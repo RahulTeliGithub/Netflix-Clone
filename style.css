@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  color: #fff;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/header-img.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 44px;
+}
+.logo {
+  cursor: pointer;
+  width: 150px;
+}
+nav button {
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 4px;
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav-btn {
+  display: flex;
+}
+.lang-cont {
+  border: 1px solid rgb(88, 87, 87);
+  padding: 5px 15px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+#lang-select {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: medium;
+}
+
+.addselect{
+    display: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-item:hover {
+    background-color: #131212;
+}
+.header-container {
+  
+  position: absolute;
+  top: 40%;
+  left: 17%;
+  right: 17%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-content h1 {
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: 1500;
+}
+.header-content p {
+  font-size: 19px;
+}
+.header-content h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+.login input {
+  border: 1px solid rgb(88, 87, 87);
+  outline: 0;
+  background: linear-gradient(rgba(12, 12, 12, 0.3), rgba(12, 12, 12, 0.3));
+  height: 58px;
+  border-radius: 4px;
+  padding: 12px 17px;
+  margin-right: 17px;
+  font-size: 17px;
+  color: white;
+  font-weight: 200;
+  width: 380px;
+}
+.login input::placeholder {
+  color: rgb(205, 201, 201);
+  font-size: 15px;
+}
+.login button {
+  background: #db0001;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 13px 23px;
+  border-radius: 4px;
+  font-size: 23px;
+  font-weight: 750;
+}
+button:hover {
+  background: #b70707;
+  transition: 0.6s ease;
+}
+
+/* ------------------ Features ------------------- */
+.features {
+  border-top: 8px solid #333;
+  padding: 50px 12%;
+  font-size: 22px;
+}
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.text-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+.features h2 {
+  font-size: 46px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/*-------------------- FAQ ----------------- */
+
+.faq {
+  border-top: 8px solid #333;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.faq h2 {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 50px;
+}
+.accordian {
+  margin: 15px auto;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 1020px;
+}
+.accordian li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordian p {
+  font-size: 23px;
+}
+.accordian li label {
+  display: flex;
+  align-items: center;
+  padding: 29px;
+  font-size: 23px;
+  font-weight: 400;
+  background: #303030;
+  margin-bottom: 2px;
+  position: relative;
+  cursor: pointer;
+}
+label::after {
+  content: "+";
+  font-size: 53px;
+  position: absolute;
+  right: 20px;
+  font-family: "Times New Roman", Times, serif;
+  transition: transform 0.5s;
+}
+.accordian li label:hover {
+  background: #504f4f;
+  transition: 0.6s ease-in-out;
+}
+input[type="radio"] {
+  display: none;
+}
+.accordian .content {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+.accordian input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.accordian input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+.faq small {
+  font-size: 18px;
+}
+.faq .email-signup {
+  width: 600px;
+  transform: translate(62%, 0%);
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+.form-container2 {
+  margin-bottom: 30px;
+}
+
+/* -------------------- footer --------------- */
+.footer {
+  padding: 50px 6% 10px;
+  border-top: 8px solid #333;
+  color: #c8c3c3;
+}
+.footer h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer .col {
+  flex-basis: 25%;
+  flex-grow: 1;
+}
+.footer .col a {
+  display: block;
+  color: #c8c3c3;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer .lang-cont {
+  width: 130px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.footer p {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+/*----------------- media query ----------------*/
+
+@media (max-width: 1279px) {
+  nav {
+    padding: 4px;
+  }
+  nav img {
+    position: relative;
+    right: 0;
+  }
+  .features .img-col img {
+    width: 100%;
+  }
+}
+@media (max-width: 1020px) {
+  .accordian {
+    max-width: 900px;
+  }
+}
+@media (max-width: 959px) {
+  .header-content h1 {
+    font-size: 29px;
+  }
+  .header-content h3 {
+    font-size: 20px;
+  }
+  .header-content p {
+    font-size: 17px;
+  }
+  .text-col,
+  .img-col {
+    flex-basis: 100%;
+  }
+  .features h2 {
+    font-size: 30px;
+  }
+  .features p {
+    font-size: 18px;
+  }
+  .row-2,
+  .row-4 {
+    flex-direction: column-reverse;
+  }
+  .features .row .text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .logo {
+    width: 100px;
+  }
+  .faq h2 {
+    font-size: 30px;
+  }
+  .accordian li label {
+    font-size: 19px;
+    padding: 20px;
+  }
+  label::after {
+    font-size: 30px;
+  }
+  .accordian p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 883px) {
+  .login input {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .form-container {
+    width: 100%;
+  }
+}
+@media (max-width: 599px) {
+    .sel{
+        display: none;
+    }
+    .addselect{
+        display: inline;
+        font-size: small;
+
+    }
+    
+
+}
+@media (max-width:593px){
+    .footer .col {
+        flex-basis: 35%;
+      }
+      
+}
+@media (max-width:407px){
+    .footer .col {
+        flex-basis: 60%;
+      }
+      
+}
+
